@@ -1,0 +1,200 @@
+<div class="column-layout group">
+  <div class="row-layout group_1">
+    <h5 class="h5">
+      Hello Sandy
+    </h5>
+    <p class="text">
+      Wednesday, 12th
+    </p>
+  </div>
+  <div class="row-layout group_2">
+    <div class="column-layout group_3">
+      <div class="row-layout group_4">
+        <div class="column-layout group_5">
+          <igx-icon class="icon">
+            mail
+          </igx-icon>
+          <p class="content">
+            Indicator Text
+          </p>
+          <h4 class="content">
+            48k
+          </h4>
+        </div>
+        <div class="column-layout group_6">
+          <igx-icon class="icon">
+            mail
+          </igx-icon>
+          <p class="content">
+            Indicator Text
+          </p>
+          <h4 class="content">
+            48k
+          </h4>
+        </div>
+        <div class="column-layout group_7">
+          <igx-icon class="icon">
+            mail
+          </igx-icon>
+          <p class="content">
+            Indicator Text
+          </p>
+          <h4 class="content">
+            48k
+          </h4>
+        </div>
+        <div class="column-layout group_8">
+          <igx-icon class="icon">
+            mail
+          </igx-icon>
+          <p class="content">
+            Indicator Text
+          </p>
+          <h4 class="content">
+            48k
+          </h4>
+        </div>
+      </div>
+      <div class="column-layout group_9">
+        <div class="row-layout group_10">
+          <p class="text_1">
+            Chart Title
+          </p>
+          <button igxButton="flat" igxRipple class="button">
+            <span>2022</span>
+            <igx-icon>
+              keyboard_arrow_down
+            </igx-icon>
+          </button>
+        </div>
+        <igx-category-chart [dataSource]="myBusinessDataTable1" chartType="area" computedPlotAreaMarginMode="series" class="category-chart"></igx-category-chart>
+      </div>
+    </div>
+    <div class="column-layout group_11">
+      <div class="column-layout group_9">
+        <div class="row-layout group_10">
+          <p class="text_1">
+            Chart Title
+          </p>
+          <button igxButton="flat" igxRipple class="button">
+            <span>2022</span>
+            <igx-icon>
+              keyboard_arrow_down
+            </igx-icon>
+          </button>
+        </div>
+        <igx-category-chart [dataSource]="myBusinessDataTable1" includedProperties="Months,Employee,Contractor,Talent" computedPlotAreaMarginMode="series" class="category-chart_1"></igx-category-chart>
+      </div>
+      <div class="column-layout group_9">
+        <div class="row-layout group_10">
+          <p class="text_1">
+            Grid Title
+          </p>
+        </div>
+        <igx-grid [data]="northwindEmployees" primaryKey="employeeID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+          <igx-column field="employeeID" dataType="number" header="employeeID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="lastName" dataType="string" header="lastName" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="firstName" dataType="string" header="firstName" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="title" dataType="string" header="title" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="titleOfCourtesy" dataType="string" header="titleOfCourtesy" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="birthDate" dataType="date" header="birthDate" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="hireDate" dataType="date" header="hireDate" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.street" dataType="string" header="address street" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.city" dataType="string" header="address city" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.region" dataType="string" header="address region" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.postalCode" dataType="string" header="address postalCode" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.country" dataType="string" header="address country" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="address.phone" dataType="string" header="address phone" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="managerID" dataType="number" header="managerID" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="notes" dataType="string" header="notes" [sortable]="true" [selectable]="false"></igx-column>
+          <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [sortable]="true" [selectable]="false"></igx-column>
+        </igx-grid>
+        <div class="row-layout group_12">
+          <button igxButton="flat" igxRipple class="button">
+            <span>View all</span>
+            <igx-icon>
+              arrow_forward
+            </igx-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="column-layout group_3">
+      <div class="column-layout group_9">
+        <div class="row-layout group_10">
+          <p class="text_1">
+            Chart Title
+          </p>
+          <button igxButton="flat" igxRipple class="button">
+            <span>2022</span>
+            <igx-icon>
+              add
+            </igx-icon>
+          </button>
+        </div>
+        <igx-pie-chart [dataSource]="financialGlobalElectricityDemand" labelsPosition="outsideEnd" labelMemberPath="Label" valueMemberPath="Value" class="pie-chart"></igx-pie-chart>
+      </div>
+      <div class="column-layout group_13">
+        <div class="row-layout group_10">
+          <p class="text_1">
+            My Tasks
+          </p>
+        </div>
+        <igx-list class="list">
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="business" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>This is the task title</span>
+            <span igxListAction>
+              <igx-icon class="icon_1">
+                arrow_forward
+              </igx-icon>
+            </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="business" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>This is the task title</span>
+            <span igxListAction>
+              <igx-icon class="icon_1">
+                arrow_forward
+              </igx-icon>
+            </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="business" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>This is the task title</span>
+            <span igxListAction>
+              <igx-icon class="icon_1">
+                arrow_forward
+              </igx-icon>
+            </span>
+          </igx-list-item>
+          <igx-list-item [isHeader]="false">
+            <span igxListThumbnail>
+              <igx-avatar icon="business" [roundShape]="true" class="avatar"></igx-avatar>
+            </span>
+            <span igxListLineTitle>This is the task title</span>
+            <span igxListAction>
+              <igx-icon class="icon_1">
+                arrow_forward
+              </igx-icon>
+            </span>
+          </igx-list-item>
+        </igx-list>
+        <div class="row-layout group_12">
+          <button igxButton="flat" igxRipple class="button">
+            <span>View all</span>
+            <igx-icon>
+              arrow_forward
+            </igx-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

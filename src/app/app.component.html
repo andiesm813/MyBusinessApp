@@ -1,0 +1,64 @@
+<igx-navbar class="navbar">
+  <igx-navbar-title>My Business</igx-navbar-title>
+  <igx-navbar-action>
+    <button igxButton="icon" igxRipple [igxToggleAction]="navDrawer" class="button">
+      <igx-icon>
+        menu
+      </igx-icon>
+    </button>
+  </igx-navbar-action>
+  <button igxButton="icon" igxRipple class="button">
+    <igx-icon>
+      search
+    </igx-icon>
+  </button>
+  <button igxButton="icon" igxRipple class="button">
+    <igx-icon>
+      notifications
+    </igx-icon>
+  </button>
+  <button igxButton="icon" igxRipple class="button">
+    <igx-icon>
+      account_circle
+    </igx-icon>
+  </button>
+</igx-navbar>
+<div class="row-layout group">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" [pinThreshold]="1024" width="200px" #navDrawer class="nav-drawer">
+    <ng-template igxDrawer>
+      <div igxDrawerItem igxRipple routerLink="/home">
+        <igx-icon class="icon">
+          dashboard
+        </igx-icon>
+        <span>Home</span>
+      </div>
+      <div igxDrawerItem igxRipple>
+        <igx-icon class="icon">
+          business
+        </igx-icon>
+        <span>Account</span>
+      </div>
+      <div igxDrawerItem igxRipple>
+        <igx-icon class="icon">
+          supervisor_account
+        </igx-icon>
+        <span>Contact</span>
+      </div>
+      <div igxDrawerItem igxRipple>
+        <igx-icon class="icon">
+          assessment
+        </igx-icon>
+        <span>Reports</span>
+      </div>
+      <div igxDrawerItem igxRipple>
+        <igx-icon class="icon">
+          calendar_today
+        </igx-icon>
+        <span>Agenda</span>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
